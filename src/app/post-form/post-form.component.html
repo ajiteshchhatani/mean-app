@@ -1,0 +1,12 @@
+<h1>Please enter user details:</h1>
+<form [formGroup]="userForm" (ngSubmit)="saveUserForm()">
+    <label for="first_name">
+        First Name:<input type="text" id="first_name" formControlName="firstname">
+    </label>
+
+    <label for="last_name">
+        Last Name:<input type="text" id="last_name" formControlName="lastname">
+    </label>
+
+    <button type="submit" [disabled]="!userForm.valid">Submit</button>
+</form>
